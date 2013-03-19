@@ -11,6 +11,9 @@
 
 @implementation GlobalModel
 
+@synthesize allowNext13;
+@synthesize allowNext15;
+
 SYNTHESIZE_SINGLETON_FOR_CLASS(GlobalModel);
 
 

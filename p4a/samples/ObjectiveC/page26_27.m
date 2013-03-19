@@ -25,6 +25,8 @@
 @synthesize cricket;
 @synthesize cursor;
 @synthesize sound;
+@synthesize note2;
+@synthesize franny;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,10 +41,23 @@
 - (void)loadView
 {
     [super loadView];
-    
+    [note2 setHidden:YES];
+    [note1 setHidden:YES];
+    [franny setHidden:YES];
+    [cricket setHidden:YES];
 }
 
 - (void)actualViewDidAppear{
+    
+    [note2 setHidden:NO];
+    [note1 setHidden:NO];
+    [franny setHidden:NO];
+    [cricket setHidden:NO];
+    [note2 start];
+    [note1 start];
+    [franny start];
+    [cricket start];
+    
     NSLog(@"Initialized");
     GlobalModel *model = [GlobalModel sharedGlobalModel];
     [model.sound pause];

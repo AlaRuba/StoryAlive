@@ -13,6 +13,8 @@
 // Note these are the files, not sheets.
 @property(nonatomic, strong) NSArray *spreadsheets;
 @property NSSound *sound;
+@property(nonatomic, assign) BOOL allowNext13;
+@property(nonatomic, assign) BOOL allowNext15;
 
 
 + (GlobalModel*) sharedGlobalModel;

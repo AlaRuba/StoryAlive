@@ -59,8 +59,7 @@
     return self;
 }
 
-- (void)loadView
-{
+- (void)loadView{
     [super loadView];
     NSLog(@"Initialized");
     GlobalModel *model = [GlobalModel sharedGlobalModel];
@@ -106,11 +105,7 @@
 
 - (void)actualViewDidAppear {
     NSLog(@"Initialized");
-    GlobalModel *model = [GlobalModel sharedGlobalModel];
-    [model.sound pause];
-    model.sound = [[NSSound alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"page6_7_voice" ofType:@"m4a"] byReference:NO];
-    [model.sound play];
-    
+
     NSRect rect = NSMakeRect(110, 110, 202, 203);
     testImageView = [[NSImageView alloc] initWithFrame:rect];
     [testImageView setImage: [NSImage imageNamed:@"page6_7_josie"]];
@@ -129,7 +124,7 @@
     testImageView3 = [[NSImageView alloc] initWithFrame:rect];
     [testImageView3 setImage: [NSImage imageNamed:@"page6_7_martin"]];
     [self.view addSubview: testImageView3];
-
+    
     
     [self createImageArray];
     [self createImageArray2];
@@ -145,6 +140,14 @@
     
     [self run];
 }
+/*
+- (void)actualViewDidAppear
+{
+    GlobalModel *model = [GlobalModel sharedGlobalModel];
+    [model.sound pause];
+    model.sound = [[NSSound alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"page6_7_voice" ofType:@"m4a"] byReference:NO];
+    [model.sound play];
+}*/
 
 - (void)run
 {
@@ -164,7 +167,7 @@
         //        [imageView setImage: [NSImage imageNamed:@"page1_2_sun"]];
         //        [self.view addSubview: imageView];
         int testNum = rand() % 100;
-        CircleView *circle = [[CircleView alloc] initWithFrame:CGRectMake(0, 0, testNum, testNum)];
+        CircleView *circle = [[CircleView alloc] initWithFrame:CGRectMake(-200, -200, testNum, testNum)];
         NSUInteger randomOpacityInt = (random() % 50 + 20 );
         CGFloat opacityScale = (CGFloat)randomOpacityInt / 100.0;
         circle.color = [NSColor colorWithCalibratedRed:1 green:1 blue:1 alpha:opacityScale];
@@ -200,7 +203,7 @@
         }
         NSUInteger randomOpacityInt = (random() % 30 + 1 );
         CGFloat opacityScale = (CGFloat)randomOpacityInt / 100.0;
-        CircleView *circle2 = [[CircleView alloc] initWithFrame:CGRectMake(0, 0, testNum, testNum)];
+        CircleView *circle2 = [[CircleView alloc] initWithFrame:CGRectMake(-200, -200, testNum, testNum)];
         circle2.color = [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:opacityScale];
         circle2.stroke = [NSColor colorWithCalibratedRed:0 green:0 blue:0 alpha:opacityScale];
         circle2.dimensions = testNum;
@@ -220,7 +223,7 @@
         //        NSImageView *imageView = [[NSImageView alloc] initWithFrame:rect];
         //        [imageView setImage: [NSImage imageNamed:@"page1_2_sun"]];
         //        [self.view addSubview: imageView];
-        CircleView *circle3 = [[CircleView alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
+        CircleView *circle3 = [[CircleView alloc] initWithFrame:CGRectMake(-200, -200, 15, 15)];
         circle3.color = [NSColor colorWithCalibratedRed:1 green:1 blue:1 alpha:0.5];
         circle3.stroke = [NSColor colorWithCalibratedRed:0 green:0 blue:0 alpha:0.5];
         circle3.dimensions = 15;
@@ -293,7 +296,7 @@
 - (void)onConnect:(NSNotification *)notification;
 {
     NSLog(@"Connected");
-    //LeapController *aController = (LeapController *)[notification object];
+  //  LeapController *aController = (LeapController *)[notification object];
     //   [aController enableGesture:LEAP_GESTURE_TYPE_CIRCLE enable:YES];
 }
 
@@ -341,7 +344,6 @@
         NSNumber *p2 = [NSNumber numberWithInt:yPixel];
         
         [self performSelector:@selector(createSun:) withObject:[[NSArray alloc] initWithObjects:p1,p2, nil] afterDelay:0];
-       // [self updateTrail];
         oldX1 = xPixel;
         oldY1 = yPixel;
     }
@@ -349,9 +351,9 @@
         [testImageView setHidden:NO];
     }
     if([frame pointables].count > 1) {
-        NSLog(@"two finger");
+        
         [testImageView2 setHidden:NO];
-
+        
         NSArray *screens = aController.calibratedScreens;
         LeapScreen *screen = [screens objectAtIndex:0];
         LeapPointable *pointable = [[frame pointables] objectAtIndex:1];
@@ -421,8 +423,6 @@
         
     }
 }
-
-
 
 
 @end

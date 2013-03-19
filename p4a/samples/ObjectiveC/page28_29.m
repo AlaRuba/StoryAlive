@@ -18,6 +18,7 @@
 @synthesize page28_29_franny;
 @synthesize page28_29_lights;
 @synthesize sound;
+@synthesize notes3;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,15 +34,20 @@
 - (void)loadView
 {
     [super loadView];
-    
+    [notes3 setHidden:YES];
 }
 
 - (void)actualViewDidAppear{
     NSLog(@"Initialized");
+    
+    [notes3 setHidden:NO];
+    [notes3 start];
+
     GlobalModel *model = [GlobalModel sharedGlobalModel];
     [model.sound pause];
     model.sound = [[NSSound alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tada" ofType:@"mp3"] byReference:NO];
     [model.sound play];
+    
 }
 
 - (void)goToNextPage;

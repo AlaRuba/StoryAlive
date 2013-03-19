@@ -162,7 +162,26 @@ NSString *const kPage1Title	    = @"Page1ViewController";
     GlobalModel *model = [GlobalModel sharedGlobalModel];
     [model.sound pause];
     currentPage--;
-    if (currentPage < 1) {
+    if (currentPage == 0) {
+        currentPage = 0;
+        
+        self.viewOverPage = ((NSViewController *)[vcArray objectAtIndex:currentPage]).view;
+            self.viewUnderPage = ((NSViewController *)[vcArray objectAtIndex:currentPage + 1]).view;
+            NSLog(@"%@",[vcArray objectAtIndex:currentPage + 1]);
+            NSLog(@"%@",self.viewUnderPage);
+            [[self viewOverPage] setFrame:[[self imageView] frame]];
+            [[self viewUnderPage] setFrame:[[self imageView] frame]];
+            
+            [self placeSubview:[self viewUnderPage] underView:[self imageView]];
+            [self placeSubview:[self viewOverPage] overView:[self imageView]];
+            //NSLog(@"[[self imageView] frame] %f %f %f %f",[[self imageView] frame].origin.x,[[self imageView] frame].origin.y,[[self imageView] frame].size.width,[[self imageView] frame].size.height);
+            [[self viewOverPage] setFrame:[[self imageView] frame]];
+            [[self viewUnderPage] setFrame:[[self imageView] frame]];
+            [self imageView:[self imageView] didChangeFrame:[[self imageView] frame]];
+        
+        return;
+    }
+    if (currentPage < 0) {
         currentPage = 0;
         return;
     }
@@ -170,7 +189,7 @@ NSString *const kPage1Title	    = @"Page1ViewController";
     
     // we are about to change the current view controller,
 	// this prepares our title's value binding to change with it
-	[self willChangeValueForKey:@"viewController"];
+	//[self willChangeValueForKey:@"viewController"];
 	
 	if ([myCurrentViewController view] != nil)
 		[[myCurrentViewController view] removeFromSuperview];	// remove the current view
@@ -191,6 +210,18 @@ NSString *const kPage1Title	    = @"Page1ViewController";
     
     [self.viewUnderPage removeFromSuperview];
     [self.viewOverPage removeFromSuperview];
+    
+    for (NSView *view in self.viewOverPage.subviews) {
+        if (![view isKindOfClass:[NSImageView class]]) {
+            [view removeFromSuperview];
+        }
+    }
+    
+    for (NSView *view in self.viewUnderPage.subviews) {
+        if (![view isKindOfClass:[NSImageView class]]) {
+            [view removeFromSuperview];
+        }
+    }
     
     self.viewOverPage = ((NSViewController *)[vcArray objectAtIndex:currentPage]).view;
     if (currentPage < vcArray.count - 1) {
@@ -428,7 +459,6 @@ NSString *const kPage1Title	    = @"Page1ViewController";
     NSLog(@"Exited");
 }
 
-
 - (void)onFrame:(NSNotification *)notification;
 {
     LeapController *aController = (LeapController *)[notification object];
@@ -472,6 +502,7 @@ NSString *const kPage1Title	    = @"Page1ViewController";
             if (dragInProcess == NO) {
                 if (yPixel < 100) {
                     if (xPixel < 100 && currentPage > 0) {
+                        /*
                         isInNextPageCurl = NO;
                         NSLog(@"Should start drag LEFT");
                         prevLocation = NSMakePoint(xPixel, yPixel);
@@ -482,6 +513,7 @@ NSString *const kPage1Title	    = @"Page1ViewController";
                         [[self viewUnderPage] setFrame:[[self imageView] frame]];
                         [self imageView:imageView mouseDragDidStartAtPoint:prevLocation];
                         dragInProcess = YES;
+                         */
                     } else if (xPixel > 1100 && currentPage < 18) {
                         isInNextPageCurl = YES;
                         NSLog(@"Should start drag RIGHT");
@@ -522,10 +554,12 @@ NSString *const kPage1Title	    = @"Page1ViewController";
                         [self imageView:imageView mouseDragDidEndAtPoint:mouseLoc];
                     }
                 } else {
+                    /*
                     if (mouseLoc.x > 400) {
                         animationInProgress = YES;
                         [self imageView:imageView mouseDragDidEndAtPoint:mouseLoc];
                     }
+                     */
                 }
   
             }
@@ -613,11 +647,6 @@ NSString *const kPage1Title	    = @"Page1ViewController";
             return @"STATE_INVALID";
     }
 }
-
-
-
-
-
 
 
 #pragma mark Image Generation

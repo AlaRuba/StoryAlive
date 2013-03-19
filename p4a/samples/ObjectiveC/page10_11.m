@@ -55,6 +55,8 @@
     [super loadView];
     NSLog(@"Initialized");
     [animated_fart setHidden:NO];
+    [animated_fart start];
+    
     GlobalModel *model = [GlobalModel sharedGlobalModel];
     [model.sound pause];
     model.sound = [[NSSound alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"page10_11_voice" ofType:@"m4a"] byReference:NO];
