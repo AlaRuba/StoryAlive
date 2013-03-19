@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS247 StoryAlive</title>
+    <meta name="description" content="CS247 Final Project: StoryAlive">
+    <meta name="author" content="Cindy Chang Jessica Kung Adam Raudonis Gavin Kho">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">StoryAlive</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              CS247 Final Project Winter 2013
+            </p>
+            <ul class="nav">
+              <li><a href="./team.html">Team</a></li>
+              <li><a href="./week5.html">Week 5</a></li>
+              <li><a href="./week6.html">Week 6</a></li>
+              <li><a href="./week7.html">Week 7</a></li>
+              <li class="active"><a href="./week8.html">Week 8</a></li>
+              <li><a href="./week9.html">Week 9</a></li>
+               <li><a href="./week10.html">Week 10</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+    	<h1>Milestone 4: User Testing</h1>
+    	<br />
+    	
+    	<h2>Progress since last milestone</h2>
+		<div class="row-fluid">
+			<div class="span8 columns">
+			<p>We tested out our last project idea in class by doing a wizard of oz with several users, including
+			Molly and Professor Bernstein. The session with Molly is shown below. During class, we got some useful feedback on
+			our app that forced us to reevaluate how gestures could help solve our user's need. In particular, we realized that
+			signing one's signature in the air is in fact harder than it is on paper and less consistent - not an action we do
+			often. It also does not leverage the 3D capability of the Leap technology and could be accomplished on something like an 
+			iPad. We realized that with this idea, we still needed to hone in on how we could really use gestures to the fullest and
+			most useful extent. This led us to revisit one of our previous ideas - gesture based passwords. During class, we talked
+			more about the feasibility of implementing this and decided it would be too unrealistic to finish by the project
+			deadline because it relied solely on machine learning and very little on actual interface design. Since we would all
+			like to get more experience actually creating visual interfaces, and because none of us actually has a background in
+			machine learning, we decided against implementing gesture based passwords as our final idea.</p>
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/60C_43ApwbA" frameborder="0" allowfullscreen></iframe>
+			
+			<br />
+			<p>Thus, we headed back to the drawing board and really dug deep into our passions and values to generate our final
+			idea for this project. Going back to our interest in education, mentioned at the end of Milestone 7, we saw that there is
+			a need to increase literacy around the world and a strong need to help young struggling readers. 
+			Based on observations of first grade students at Nixon Elementary reading during story time, and research into the digital
+			e-book and interactive picture book space, we finalized our idea as an immersive, interactive 3D
+            reading experience that seeks to engage, entertain, and empower first grade students to read, and to 
+            help young readers develop literacy and improve their critical thinking skills. </p>
+            
+			<p>We created a wizard of oz of our story experience <a href="https://docs.google.com/file/d/0B8Q9TKPRV1TEVW9Hc0ZUZ3lOdlE/edit?usp=sharing">
+			here</a> and tested it out below. From our wizard of oz experience, we learned that it's important to give the
+			user strong clues as to what parts of the story and what characters they can interact with, and to help them develop
+			a mental model for what to expect when doing certain interactions on the screen. For example, hovering over a character
+			longer causes a bigger movement than just highlighting the character.
+			We aim to do more iterations of wizarding with more users over the weekend in conjunction to developing the 
+			functional version of the app in preparation for our user testing next week.</p>
+			
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/9RN2dTI9pT4" frameborder="0" allowfullscreen></iframe>
+			<hr />
+			</div>
+		</div>
+      	
+      	 <h2>User Testing</h2>
+      	<div class="row-fluid">
+      		
+			<div class="span8 columns">
+			
+				<h3>Introduction</h3>
+				<h4>Motivation</h4>
+				<p>In many elementary schools, teachers have story time where they read to all of their students at once. 
+				The problem though is that during story time, many students often sit back passively as the teacher reads. 
+				They may lose interest in the story, or they might not know a certain word in the book, but feel to afraid or 
+				shy to ask what it means. Often, students don't get to physically engage with the book themselves. On the 
+				flip side, when the first graders read picture books on their own or in small groups, they often don't 
+				think critically about what they are reading and just look at pictures, or they may get distracted from 
+				the book easily.</p>
+				
+				<p>Technology is becoming more prevalent in schools these days, as many classrooms and libraries are equipped
+				 with computers and are beginning to figure out how to integrate other technologies like the iPad into their 
+				 curriculum. Because the LEAP motion is cheaper than the iPad, we are also motivated to examine how the 
+				 Leap can be used as an engaging and more cost-effective technology in the classroom for teaching and learning.</p>
+				 
+				 <h4>Goals</h4>
+				 <p>Our goal is to make children's books come alive--to create an engaging and interactive reading experience 
+				 for first-graders learning how to read so that they feel more engaged in the books they read in small groups 
+				 and in control of their reading. We want our application to empower students to think critically about the 
+				 story and be able to draw out insights. By leaving parts of the story unfinished for the user to interact 
+				 with and complete, our application will encourage students to be active participants in the storytelling 
+				 process. In this way, we hope to help students develop total literacy, confidence, and interest in reading.
+				 </p>
+				 
+				<h4>The book: Franny the Firefly</h4>
+				 <p>We thought it would be best to use our project to illustrate what these interactive story books could look like, and
+				 therefore used an example picture book as the main story in our project. This book was written and illustrated
+				 by Cindy last spring quarter with the help of three other group members as a project in Cindy's PWR2 class, "Once 
+				 Upon a Cause: Picture Books for Local Children", taught by Erik Ellis. The actual crafting of the book followed an iterative,
+				 user-centered design process, involving several rounds of storyboarding, feedback sessions from both classmates as well
+				 as first graders and teachers at Nixon Elementary, copywriting, and illustrating. The final book itself as used in 
+				 this project is the result of a strongly iterative design process centered around first graders at Nixon over the span
+				 of a quarter.
+				 </p> 
+				  
+				 <h4>Features - Rationale, Hypotheses and Questions</h4>
+				 <ul>
+					<li>Pre-recorded version of story. Kids can choose to have book read to them (listen to audio) and 
+					highlight words as voice reads<, or read the book aloud themselves.</li>
+						<ul>
+							<li>Rationale</li>
+							<p>Reading aloud to young children, particularly in an engaging manner, promotes emerging literacy and 
+							language development. Having a book read aloud to a child causes pleasurable emotions in the child.
+							Reading aloud is, according to the landmark 1985 report “Becoming a Nation of Readers,” “the single most 
+							important activity for building the knowledge required for eventual success in reading. 
+							Research has shown that children may learn to read better, think better, imagine more richly, and
+							become a passionate and lifelong reader under this practice.</p>
+						</ul>
+					<li>Dictionary of words/hyperlinks to definitions so students can recognize and learn new vocabulary words</li>
+						<ul>
+							<li>Rationale</li>
+							<p>Reading is considered to be a key element of vocabulary development in school-age children. 
+							Learning vocabulary from these 
+							experiences includes using context, as well as explicit explanations of words and/or events in the story. 
+							This may be done using illustrations in the book to guide explanation and provide a visual reference or 
+							comparisons, usually to prior knowledge and past experiences. We'd thus like to include definitions to words
+							the first graders might not know to help them expand their arsenal of vocabulary. </p>
+						</ul>
+					<li>Drag items onto the main character, Franny, to try on</li>
+						<ul>
+							<li>Rationale</li>
+							<p>This is important for the students to engage with the characters in the book for them to feel interested.
+							This aspect of the app features a shelf of items for Franny, the main character, to try on. The kids will drag
+							these items onto Franny and think about what will happen after Franny tries on the items. This will help
+							students develop a notion of cause and effect relationships. The students will then be able to see an animation
+							of what happens after Franny tries on the object to see if their guess was correct.</p>
+						</ul>
+					<li>Animated characters</li>
+						<ul>
+							<li>Rationale</li>
+							<p>To make the story feel more alive, the characters and parts of the book students cannot directly interact
+							with will still be moving and slightly animated to give the book a more alive feel. This engages the 
+							student more and makes the story feel more relatable and living - a story come alive. Students become more
+							interested in reading this way.</p>
+						</ul>
+					<li>Draw out lights of fireflies</li>
+						<ul>
+							<li>Rationale</li>
+							<p>To make the reader feel like he/she is an active participant in the reading experience, there are two 
+							parts of the story where the reader will have the chance to essentially help create the illustrations that
+							go along with the story. Readers will be able to draw in the lights that come out of the fireflies in the book.
+							This interaction is necessary because it empowers the first graders to be in control over what they
+							read and teaches them early on that they make an impact and their presence matters to the creation of the 
+							story. This will encourage the students to read more and become more engaged.</p>
+						</ul>
+					<li>Audio</li>
+						<ul>
+							<li>Rationale</li>
+							<p>To engage more of the five senses, we will add audio in to create a truly immersive experience. For
+							example, having the sound of crickets during the part of the book where Cricket sings, would help
+							illustrate this point of the story much more clearly. This feature will help readers understand the
+							context and content of the story better.</p>
+						</ul>
+					<li>Answer questions posed by the book before critical moments</li>
+						<ul>
+							<li>Rationale</li>
+							<p>Because our app is applicable to students who may be reading in small groups in front of a 
+							computer screen, alone, or with a parent, it's important to help the child learn how to critically
+							think about the content in the book. Often, teachers during story time will pause before certain
+							sections of the book and poll the students to ask them about the story as a means of engaging them.
+							This feature seeks to emulate that rich experience and can be used when parents and teachers, figures
+							who would be asking the students of these questions,
+							are absent.</p>
+						</ul>
+					
+				</ul>
+				 
+	
+				 
+				 <h4>General Driving Questions</h4>
+				 <p>Will the interactivity in the experience enhance or detract from the students' experience of reading the
+				  book? Will our application help the students understand the content of the book and grasp its message? Will
+				  students be more engaged in reading and enjoy the digital experience better than the traditional book? Will
+				  the students find the gestures used to interact with the app (swipe, hover, etc) intuitive to use?
+				 </p>
+				 
+				 <h4>General Hypotheses</h4>
+				 <p>We think that the students will be really fascinated and taken by the technology, and they will really want
+				 to play with it. They will likely spend a lot of time moving the objects on the page, thus getting to know 
+				 the story. We think the kids will be very engaged and will like the Leap experience because it's fun. The gestures
+				 we believe will be confusing to the first graders at the start of the study. There will also be a lot of noise in
+				 their gestures, since they may not fully remember the gestures. First graders also tend to be very physical, so
+				 there could be other gestures they do unintentionally that may get mapped to gestures in our technology.
+				 </p>
+				 
+				 <hr />
+				 
+				<h3>Methods</h3>
+				<h4>Recruiting Participants</h4>
+				<p>Cindy sent an email to Kim Powell, a first grade teacher at Lucille M. Nixon Elementary near Stanford, on
+				 Wednesday 2/27, asking if we could go into her class next week to test our application with her students. 
+				 For her PWR class last spring quarter, Cindy worked with another teacher at Nixon to create a book for her
+				 students, so Cindy felt comfortable reaching out to Kim because our project is in the same vein. We have 
+				 written consent forms to give to the parents of the students to sign as well. The first grade students at
+				  Nixon are about 6-7 years old and are pretty varied in terms of their backgrounds. We expect to test on 
+				  a relatively even number of both female and male students. We will try to test on at least 8 students
+				  (4 groups of 2) - while also trying to accomodate the needs of the teacher and other students in the room.
+				  Each group will get about 5-10 minutes and we will be sure to respect the teacher and students' time. If 
+				  it looks like the students don't finish reading the story on the computer, we will hand the paper copy of the book to them
+				  to finish while another group tries out the technology.
+				</p>
+				
+				<h4>Study Design</h4>
+				<p>Next Tuesday, we will go into Kim Powell's first grade class at Lucille M. Nixon Elementary
+				for 30-45 minutes. We will break up the class into pairs of 2 first-graders each and set up our application
+				in one corner of the classroom. While one pair of students is trying out our application, the other students 
+				will do reading activities as directed by their teacher. Kim will help us explain to her students that we are
+				 a group of Stanford students creating an interactive storybook and wanted to try it out with them as we set up.
+				</p>
+				
+				
+				<h4>System setup and Environment</h4>
+				<p>We are going to set up the Leap with one of our laptops on a desk at eye level to the students. We will
+				then have our application loaded on the computer for the students to start using immediately.</p>
+				
+				<h4>Sequence of Events</h4>
+				<ol>
+					<li>We will tell the students they are going to read a picture book on our laptop.</li>
+					<li>First, students will go through our tutorial in the beginning of the story, introducing them to the gestures such as swiping to turn 
+					the pages and selecting and dragging objects.</li>
+						<ul>
+							<li>Don't help them out unless they explicitly ask and are really struggling</li>
+							<li>Note how easy it is for them to do these tasks, how accurately they do it. Do they do other gestures
+							instead? What are they saying? Have them talk aloud during this process.</li>
+						</ul>
+					<li> Once students feel comfortable with the gestures, we will have them start reading the story. </li>
+						<ul>
+							<li>Students will have the option to have the story read aloud to them, or to read 
+							the story aloud themselves.</li>
+							<li>Note which one they chose. Does it correlate to how comfortable they seem in their speech?
+							How outgoing they seem? Do struggling readers choose this option more?</li>
+						</ul>
+					<li> On the first page, note how they interact with the book. This is important because it is their first impression
+					and start of using the leap based interactive book. Have them turn the page.</li>
+						<ul>
+							<li>Note the types of gestures they do. Do they correctly do the gestures they practiced in the tutorial? 
+							Do they remember these gestures? What other gestures do they do? What are they saying? Talk aloud.</li>
+							<li>Note their reaction to their gestures. Are they delighted and surprised by what happens
+							on the screen because of their gestures?</li>
+							<li>How easy is it for them to interact with the book? Do they struggle to do or recall the gestures?
+							Do they want to touch the screen instead?</li>
+						</ul>
+					<li>Have students draw out lights of other fireflies in the story by following cues on the screen</li>	
+						<ul>
+							<li>Do they notice the cue and follow through with the action? Is it confusing, do they have
+							questions? Do they know what they are doing in relation to the story? Have them talk aloud.</li>
+						</ul>
+			
+					<li> On pages 12-13 and pages 14-15, students drag items onto Franny, the main character. </li>
+						<ul>
+							<li>Do they understand what they are doing in relation to the story? What do they think will happen
+							as the effect of their actions?</li>
+							<li>Does the animation following the placement of the item onto the character delight them? Talk aloud.</li>
+						</ul>
+					<li> Have them continue to read through the story and interact with each page, following the cues for interaction. </li>
+						<ul>
+							<li>Do they know how or where to interact with the characters? We will have subtle cues (bouncing colored dots, etc.)
+							next to characters that they should interact with. Do they notice? Do these cues help? Should these cues be
+							more obvious? Are text based or visual cues more effective for them?</li>
+						</ul>
+					<li>After the study, have kids look at the paper version of the book</li>
+						<ul>
+							<li>How do they react to the paper copy? What do they do with it? Which version do they prefer?</li>
+						</ul>
+					
+				</ol>
+				
+				<h4>Specific Tasks to test</h4>
+				<ol>
+					<li>Turn pages</li>
+					<li>Draw out the lights of the fireflies in the story</li>
+					<li>Drag items onto the main character, Franny, to try on</li>
+					<li>Answer questions posed by the book before critical moments</li>
+					
+				</ol>
+				
+				
+				
+				<h4>Collecting Data</h4>
+				<p>Because first graders are often very vocal, we will ask them during the task to do a talk-aloud protocol. 
+				This will be the most natural easy, and effective way both for the students to give us their thoughts and feedback,
+				and for us to distill insights. We will also observe where students have difficulty in our system and interview 
+				them after they have finished reading to ask for their thoughts on the entire reading experience compared to 
+				regular story time or reading on their own. We will also interview them while they are engaging with the 
+				printed copy of the book. We will take down everything the students say instead of having them fill out a survey
+				because it is faster and easier for them to do just talk instead of write or type. Additionally, we will
+				try to record or take pictures of the students interacting with the technology during critical moments.
+	
+				</p>
+				
+				<h3>Results, Discussion, and Implications can be found <a href="https://docs.google.com/document/d/1M_FiapAE6anRbUgXmacICrgel8ALQSjRtSCZ-upegqc/edit?usp=sharing">here</a></h3>
+				
+				 <hr />
+        <div class="row-fluid">	
+			  <footer>
+				<p>by <a href="./team.html">Cindy Chang</a>, 
+				<a href="./team.html">Jessica Kung</a>,
+				<a href="./team.html"> Adam Raudonis</a>, and 
+				<a href="./team.html">Gavin Kho</a></p>
+			  </footer>	 
+		</div>
+		
+			<div>
+            
+          </div>
+          
+        </div>
+       

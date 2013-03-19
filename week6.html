@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS247 StoryAlive</title>
+    <meta name="description" content="CS247 Final Project: StoryAlive">
+    <meta name="author" content="Cindy Chang Jessica Kung Adam Raudonis Gavin Kho">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">StoryAlive</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              CS247 Final Project Winter 2013
+            </p>
+            <ul class="nav">
+              <li><a href="./team.html">Team</a></li>
+              <li><a href="./week5.html">Week 5</a></li>
+              <li class="active"><a href="./week6.html">Week 6</a></li>
+              <li><a href="./week7.html">Week 7</a></li>
+              <li><a href="./week8.html">Week 8</a></li>
+              <li><a href="./week9.html">Week 9</a></li>
+               <li><a href="./week10.html">Week 10</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+    	<h1>Milestone 2: Wizard of Oz Testing</h1>
+    	<br />
+    	
+    	
+    <h3>General Plan and Materials</h3>
+      <div class="row-fluid">
+      	<div class="span8 columns">
+      		<p>Two of us will sing Pachelbel's Canon in D as the user conducts and tries to accomplish the following tasks. </p>
+			<ol>
+				<li >Speed up the music</li>
+				<li >Slow down the music</li>
+				<li >Make the music softer</li>
+				<li >Make the music louder</li>
+			</ol> 
+			<h4>Interfaces to test</h4>
+			<ul>
+				<li>Idea 1
+					<ul>
+						<li>User moves hands to follow dots on "screen" (like in the video prototype). Users will need to gesture to certain instruments to cue them in.</li>
+						<li>How to Test: While two of us sing, one person will have a colored paper cutout of a circle and move it appropriately to guide the user to conduct. The other person in our group will record observations and tell the user what tasks to do.</li>
+					</ul> 
+				</li>
+				<li>Idea 2
+					<ul>
+						<li>User moves hands to follow outline of a person on the screen (like our human tetris--stay within the line type of deal). Users will match their gestures to effectively "conduct"</li>
+						<li>How to Test: While two of us sing, one person will stand facing the user and will "conduct" the two people singing while the user follows their gestures. The other person in our group will record observations and tell the user what tasks to do.</li>
+					</ul> 
+				</li>
+			</ul>
+			<p>An image of our Wizard of Oz interface
+				<ul class="thumbnails">
+					<li class="span8">
+						<a href="img/woz1.jpg" class="thumbnail" target="_blank">
+							<img src="img/woz1.jpg">
+						</a>
+					</li>
+				</ul> 
+			</p>
+      	</div>
+    	 </div> <!--row fluid -->
+    
+    
+	 <h3>Task 1: Change Volume of Music</h3>
+      <div class="row-fluid">
+      	<div class="span8 columns">
+      		<h4>Rationale</h4>
+      		<p>While dynamics are marked in musicians' music, musicians sometimes forget to follow them, or 
+      		they do not exaggerate the dynamics enough. The conductor is often needed to assess the balance of the
+      		entire ensemble and help to draw out lines while hiding others. Conveying dynamics is an important of conducting.</p>
+      		<h4>What we did</h4>
+      		<p>We asked our testers to make the music louder and make it softer by keeping the beat of the music with one
+      		hand while changing the volume with the other.</p>
+      		<h4>Lessons Learned</h4>
+      		<p>We learned that it is very difficult for users to multitask with their hands, like trying to rub your stomach and
+      		pat your head at the same time. Users found this to be extremely confusing. We realized that instead of our
+      		current design, what is more realistic is that conductors often use the size of their gesture to indicate loudness
+      		and softness of the music. One idea from our testing today that we are taking forward is to encode loudness with
+      		big gestures and softness with small gestures.</p>
+      	</div>
+      	 </div> <!--row fluid -->
+      	 
+      	 
+      	<h3>Task 2: Change Tempo of Music</h3>
+      <div class="row-fluid">
+      	<div class="span8 columns">
+      		<h4>Rationale</h4>
+      		<p>Conductors are often most needed during tempo changes because otherwise, the ensemble falls apart
+      		because there is not a unified tempo for the musicians to play at.</p>
+      		<h4>What we did</h4>
+      		<p>We asked our test users to figure out how to make the music faster. What happened was that our 
+      		users naturally moved their hands faster.</p>
+      		<h4>Lessons Learned</h4>
+      		<p>People naturally moved their hands faster and slower to change the music. This seemed very intuitive.</p>
+      	</div>	
+      </div> <!--row fluid -->
+      
+      
+      <h3>Moving Forward</h3>
+      <div class="row-fluid">
+      	<div class="span8 columns">
+      		<p>In general, we found that the dot prototype (Idea 1) worked better. However, we are currently having a
+      		hard time with our idea and are looking to pivot away from music, but need to 
+      		meet again to discuss our ideas. It is very likely that we will end up doing an application for education
+      		purposes, such as teaching children science concepts such as magnetism. From our Wizard of Oz testing today, 
+      		we realized that the reason we have been getting stuck on music is that music is fundamentally so physical and 
+      		emotional that it is hard to replicate or simulate virtually. Conducting especially, varies based on different
+      		orchestras, and is difficult to standardize. Conducting does not rely just on the hands, but rather eye contact and
+      		facial expression connecting the conductor and the musicians. Conductors also use their whole bodies to face certain
+      		sections to cue them in, so by tracking only fingers and hands with the Leap Motion was very limiting on our
+      		part. Additionally, we were facing challenges in making the interface intuitive as well as making the music
+      		sound good. Ultimately, we found that we were still a little confused on narrowing down our target user
+      		and use case scenario. After talking with Molly during and after class to get feedback and advice on our project,
+      		 we have decided that in moving forward,
+      		we will circle back to discovering a need and work toward
+      		creating a gesture based interface to solve that need. Our current plan is to explore the realm of
+      		education for kids, perhaps in STEM areas. Over the weekend, we plan on deciding on an idea and working toward
+      		implementing our functional prototype for next Thursday.</p>
+      		
+      	</div>
+      	 </div> <!--row fluid -->
+      
+
+     	<div>
+            
+          </div>
+         
+
+      <hr>
+
+      <div class="row-fluid">	
+			  <footer>
+				<p>by <a href="./team.html">Cindy Chang</a>, 
+				<a href="./team.html">Jessica Kung</a>,
+				<a href="./team.html"> Adam Raudonis</a>, and 
+				<a href="./team.html">Gavin Kho</a></p>
+			  </footer>	 
+		</div>
+	
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   	 <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+   
+
+  </body>
+</html>

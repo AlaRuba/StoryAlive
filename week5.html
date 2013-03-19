@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS247 StoryAlive</title>
+    <meta name="description" content="CS247 Final Project: StoryAlive">
+    <meta name="author" content="Cindy Chang Jessica Kung Adam Raudonis Gavin Kho">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">StoryAlive</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              CS247 Final Project Winter 2013
+            </p>
+            <ul class="nav">
+              <li><a href="./team.html">Team</a></li>
+              <li class="active"><a href="./week5.html">Week 5</a></li>
+              <li><a href="./week6.html">Week 6</a></li>
+              <li><a href="./week7.html">Week 7</a></li>
+              <li><a href="./week8.html">Week 8</a></li>
+              <li><a href="./week9.html">Week 9</a></li>
+               <li><a href="./week10.html">Week 10</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+    	<h1>Milestone 1: Team Formation and Prototyping</h1>
+    	<br />
+    
+    	<h1>Brainstorming</h1>
+    	<br />
+    	<h3>Thursday 2/7 Class Brainstorming Session</h3>
+    	<div class="row-fluid">
+      	<div class="span8 columns">
+      		<p>Our initial idea was a system that allowed a user to adjust the dynamics and expression of a piece
+      		of music by making certain hand gestures. This system would be useful for student conductors to 
+      		practice with. However, as we talked about possible implementation challenges and revisited the
+      		use case and scenario of the product, we became less confident in the idea and how we could pursue it.
+      		Although we liked that the use of gestures would really augment the experience, we were slightly unsure of the
+      		user need for the application.
+      		Thus, while we did brainstorm ways to prototype the original music idea, we also brainstormed other ideas
+      		that we might be able to pursue with the Leap Motion.</p>
+      	</div>
+      	<div class="span4">
+			<ul class="thumbnails">
+				<li class="span4">
+					<a href="img/brainstorm1.jpg" class="thumbnail" target="_blank">
+						<img src="img/brainstorm1.jpg">
+					</a>
+				</li>
+				<li class="span4">
+					<a href="img/class-brainstorm.png" class="thumbnail" target="_blank">
+						<img src="img/class-brainstorm.png">
+					</a>
+				</li>
+			</ul> 
+			
+      	</div>
+      </div> <!--row fluid -->
+      	
+      
+       <h3>Thursday 2/7 Section</h3>
+    	<div class="row-fluid">
+      	<div class="span8 columns">
+      		<p>Although our project coach could not make it to the section, we chatted with Professor Bernstein 
+      		about our project and how we could prototype it, since after class, we were thinking of possibly pivoting
+      		in our application area. Professor Bernstein recommended that we could take the app in the direction
+      		of education--teaching conducting. He also advised us to look into solfeg as gestures and do some more
+      		observations and interviews of conductors. For inspiration, we watched 
+      		<a href="http://www.nytimes.com/video/2012/04/06/arts/music/100000001474891/demystifying-conducting.html">
+      		this video about demystifying conducting in the NY Philharmonic Orchestra with Alan Gilbert.</a></p>
+      	</div>
+      	<div class="span4">
+      	</div>
+      </div> <!--row fluid -->
+    	
+    	<br />
+    	 <h3>Brainstorming Session 2</h3>
+    	<div class="row-fluid">
+      	<div class="span8 columns">
+      		<p>We got together again to decide on an idea to prototype. We had another brainstorming session
+      		and thought of a couple more ideas we wanted to pursue: a Beatpad simulator for percussionists and 
+      		drummers who cannot afford physical Beatpads that would work with the Leap Motion and their laptops,
+      		as well as a gesture based password system for your computer, and potentially house and car. In talking
+      		about these ideas, we drew some quick sketches and mocks as a way of prototyping the idea. Some of 
+      		these mocks are displayed on the right.</p>
+      		<p>Ultimately though, we decided to circle back to our original idea with a stronger focus
+      		and intent. We settled on an application that guides people to conduct--like Guitar Hero for conductors.
+      		The reason behind this is that we found that this application definitely had a need
+      		in beginning conducting classes and could be used to engage children and adults alike in
+      		creating music themselves. The use of gestures in controlling the music's tempo,
+      		dynamic, intensity, etc. definitely augments the experience and what gestures can accomplish
+      		cannot be replicated by solely using a mouse or existing interface. </p>
+      	</div>
+      	<div class="span4">
+      		<ul class="thumbnails">
+				<li class="span4">
+					<a href="img/brainstorm2.JPG" class="thumbnail" target="_blank">
+						<img src="img/brainstorm2.JPG">
+					</a>
+				</li>
+				<li class="span4">
+					<a href="img/lock2.png" class="thumbnail" target="_blank">
+						<img src="img/lock2.png">
+					</a>
+				</li>
+				<li class="span4">
+					<a href="img/lock.png" class="thumbnail" target="_blank">
+						<img src="img/lock.png">
+					</a>
+				</li>
+			</ul> 
+			
+      	</div>
+      </div> <!--row fluid -->
+    	
+    	
+    	<br />
+   		<h1>Prototyping</h1>
+   		 <br />
+       <h3>Feasibility Test</h3>
+      <div class="row-fluid">
+      	<div class="span8 columns">
+      		<h4>Rationale</h4>
+      		<p>Because our application would require gestures controlling music, we decided
+      		it was necessary to begin testing just how feasible our idea would be, especially how
+      		we could program the music to respond to the gestures accurately and in an aesthetically 
+      		pleasing way.</p>
+      		<h4>What we did</h4>
+      	    <p>We played around with both Leap Motion and MIDI sound technologies.
+         For the Leap, wesearched the developer portal for every example he could find to
+        get an idea for what it is capable of and to hopefully spark some ideas for cool uses of
+        it applied to our music topic. We also installed and ran the Javascript Leap Library, because as a
+        group we are relatively comfortable with the language. </p>
+      		<h4>Lessons Learned</h4>
+      		<p>From this library, we
+        determined that it was clumsy to modify objects with your hands using the rotating
+        and scaling gestures. However, lucky for our idea, simple tracking in 3D space works perfectly.
+        In the exploration of the project's sound component, we decided to test out MIDI-JS.
+         One of our ideas consisted of music playing at a perfectly 
+        even velocity and then changing the velocity with one's gestures. We found that you 
+        could alter the velocity of the individual notes while it was playing them, but we 
+        could only figure out how to get the granularity of the velocity change to about
+         100 notes. We hope to explore other libraries such as Max/Msp to
+         get past that blocking issue and discover how to control the velocity and volume
+          of single notes in real time. We also determined that one of our later ideas 
+          of a kind of guitar-hero for conductors would be easier to implement and 
+          would involve insuring the timing of the gestures was correct. However it 
+          would be cool to make the app give you feedback in the sense of a changed 
+          tempo and velocity.</p>
+      	</div>
+      	<div class="span4">
+      		<ul class="thumbnails">
+      			<li class="span4">
+					<iframe width="300" height="200" src="http://www.youtube.com/embed/USLFAxFISnM" frameborder="0" allowfullscreen></iframe>
+				</li>
+      		</ul>
+      		<ul class="thumbnails">
+				<li class="span4">
+					<a href="img/midi.png" class="thumbnail" target="_blank">
+						<img src="img/midi.png">
+					</a>
+				</li>
+				
+			</ul> 
+      	</div>
+      </div> <!--row fluid -->
+      
+      <br />
+      <h3>UI Mockup of System</h3>
+      <div class="row-fluid">
+      	<div class="span8 columns">
+      		<h4>Rationale</h4>
+      		To better understand our idea of guiding the user to conduct a piece of music,
+      		we needed to visualize the interface. 
+      		<p></p>
+      		<h4>What we did</h4>
+      		We sketched out a few ways we could implement the interface. One idea was to have
+      		colored and uncolored dots on the screen. Users move their hands to match colored 
+      		dots accordingly and dots are colored in an order that simulates the act of 
+      		conducting. We expanded this idea to accomodate the two hands of a conductor/user
+      		and then also thought the user should be able to see what an actual conductor sees:
+      		the orchestra. In another version of our mock, we sketched out the layout of a 
+      		typical orchestra labeled according to instruments. We tried then to figure out how to
+      		overlay the gesture interface over this orchestral view, and again, tried to mimic
+      		as much as possible what an actual conductor sees (the orchestra and the score).
+      		These processes and the final
+      		digital mock is displayed to the right.
+      	    <p></p>
+      		<h4>Lessons Learned</h4>
+      		<p>We were reminded about the importance of mapping, especially for this 
+      		gestural guidance interface. As much as possible, we drew inspiration for the interface
+      		from real life scenarios in order to help our user, an aspiring beginner conductor,
+      		in a more conducive manner. We learned that this holistic view gave users a sense
+      		of understanding and made them feel more natural.</p>
+      	</div>
+      	<div class="span4">
+      		<ul class="thumbnails">
+				<li class="span4">
+					<a href="img/ui-sketch1.jpg" class="thumbnail" target="_blank">
+						<img src="img/ui-sketch1.jpg">
+					</a>
+				</li>
+				<li class="span4">
+					<a href="img/ui-sketch2.JPG" class="thumbnail" target="_blank">
+						<img src="img/ui-sketch2.JPG">
+					</a>
+				</li>
+				<li class="span4">
+					<a href="img/ui-mock.png" class="thumbnail" target="_blank">
+						<img src="img/ui-mock.png">
+					</a>
+				</li>
+				
+			</ul> 
+      	
+      	</div>
+      </div> <!--row fluid -->
+    
+   	<br /> 
+    <h3>Video Prototype of Interaction</h3>
+      <div class="row-fluid">
+      	<div class="span8 columns">
+      		<h4>Rationale</h4>
+      		<p>To simulate the interaction and study how gestures control the music, we decided it was
+      		necessary to create a video prototype to illustrate the point.</p>
+      		<h4>What we did</h4>
+      		<p>Using our UI mocks, we matched Pachelbel's Canon in D with a series of mockups in a video
+      		clip and simulated conducting the piece by matching the gestures in the video clip at the
+      		right moment, in accordance with the sounds being played. In the actual application,
+      		we would like to dynamically update the score, though this feature is not shown
+      		in the video prototype. The result is the following: </p>
+      	    <iframe width="420" height="315" src="http://www.youtube.com/embed/ZejLUdMideo" frameborder="0" allowfullscreen></iframe>
+      		<h4>Lessons Learned</h4>
+      		We learned that highlighting the sections in the orchestra was important to give the user
+      		feedback on his actions. Additionally, through the video prototype, we realized that 
+      		besides simply colored dots to indicate where hand placement while conducting, we should
+      		also show the path between the dots, or at the very least, inform the user to be
+      		as fluid and natural in his movements as possible to look like a more professional conductor.
+      		
+      		<p></p>
+      	</div>
+      	
+      </div> <!--row fluid -->
+       
+
+     	<div>
+            
+          </div>
+         
+
+      <hr>
+
+      <div class="row-fluid">	
+			  <footer>
+				<p>by <a href="./team.html">Cindy Chang</a>, 
+				<a href="./team.html">Jessica Kung</a>,
+				<a href="./team.html"> Adam Raudonis</a>, and 
+				<a href="./team.html">Gavin Kho</a></p>
+			  </footer>	 
+		</div>
+	
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   	 <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+   
+
+  </body>
+</html>
